@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-13 14:19+0000\n"
-"PO-Revision-Date: 2012-10-14 15:30\n"
+"POT-Creation-Date: 2012-10-14 13:02+0000\n"
+"PO-Revision-Date: 2012-11-09 12:09\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -104,7 +104,7 @@ msgstr ""
 #: templates/oscar/dashboard/users/detail.html:96
 #: templates/oscar/dashboard/users/detail.html:130
 msgid "Addresses"
-msgstr ""
+msgstr "住所"
 
 #: apps/address/abstract_models.py:140
 msgid "ISO 3166-1 alpha-2"
@@ -156,11 +156,11 @@ msgstr ""
 #: templates/oscar/dashboard/orders/order_list.html:104
 #: templates/oscar/dashboard/orders/shippingaddress_form.html:5
 msgid "Shipping address"
-msgstr ""
+msgstr "送付先"
 
 #: apps/address/abstract_models.py:182
 msgid "Shipping addresses"
-msgstr ""
+msgstr "送付先"
 
 #: apps/address/abstract_models.py:206 apps/analytics/abstract_models.py:43
 #: apps/analytics/abstract_models.py:71 apps/analytics/abstract_models.py:87
@@ -217,11 +217,11 @@ msgstr ""
 #: templates/oscar/dashboard/orders/order_detail.html:329
 #: templates/oscar/dashboard/orders/order_list.html:105
 msgid "Billing address"
-msgstr ""
+msgstr "請求先"
 
 #: apps/address/abstract_models.py:267
 msgid "Billing addresses"
-msgstr ""
+msgstr "請求先"
 
 #: apps/analytics/abstract_models.py:16 apps/analytics/abstract_models.py:72
 #: apps/analytics/reports.py:22 apps/basket/abstract_models.py:452
@@ -361,7 +361,7 @@ msgstr ""
 
 #: apps/analytics/reports.py:42
 msgid "Product analytics"
-msgstr ""
+msgstr "商品解析"
 
 #: apps/analytics/reports.py:64 apps/basket/reports.py:21
 #: apps/catalogue/abstract_models.py:24 apps/catalogue/abstract_models.py:60
@@ -393,7 +393,7 @@ msgstr ""
 #: templates/oscar/dashboard/vouchers/voucher_detail.html:34
 #: templates/oscar/dashboard/vouchers/voucher_list.html:50
 msgid "Name"
-msgstr "アカウント情報"
+msgstr "詳細"
 
 #: apps/analytics/reports.py:65 templates/oscar/customer/profile.html:65
 #: templates/oscar/dashboard/reports/partials/user_report.html:10
@@ -424,11 +424,11 @@ msgstr ""
 #: apps/analytics/reports.py:72
 #: templates/oscar/dashboard/reports/partials/user_report.html:17
 msgid "Date of last order"
-msgstr ""
+msgstr "最終注文日"
 
 #: apps/analytics/reports.py:94
 msgid "User analytics"
-msgstr ""
+msgstr "ユーザー解析"
 
 #: apps/basket/abstract_models.py:22
 msgid "Owner"
@@ -573,19 +573,34 @@ msgstr ""
 msgid "You cannot modify a %s basket"
 msgstr ""
 
-#: apps/basket/abstract_models.py:675 apps/order/abstract_models.py:450
+#: apps/basket/abstract_models.py:656
+#, python-format
+msgid ""
+"The price of '%(product)s' has increased from %(old_price)s to %(new_price)s"
+" since you added it to your basket"
+msgstr ""
+"お客様が'%(product)s' をカートに入れてから価格が %(old_price)s から %(new_price)s に変更されました"
+
+#: apps/basket/abstract_models.py:662
+#, python-format
+msgid ""
+"The price of '%(product)s' has decreased from %(old_price)s to %(new_price)s"
+" since you added it to your basket"
+msgstr "'%(product)s' をカートに入れた後、価格が %(old_price)s から %(new_price)s へ変更になりました"
+
+#: apps/basket/abstract_models.py:673 apps/order/abstract_models.py:450
 #: apps/order/abstract_models.py:474 apps/order/abstract_models.py:546
 #: apps/order/abstract_models.py:588
 msgid "Line"
 msgstr ""
 
-#: apps/basket/abstract_models.py:676 apps/catalogue/abstract_models.py:549
+#: apps/basket/abstract_models.py:674 apps/catalogue/abstract_models.py:549
 #: apps/catalogue/abstract_models.py:728 apps/catalogue/abstract_models.py:807
 #: apps/order/abstract_models.py:452 apps/order/abstract_models.py:473
 msgid "Option"
 msgstr ""
 
-#: apps/basket/abstract_models.py:677 apps/basket/reports.py:26
+#: apps/basket/abstract_models.py:675 apps/basket/reports.py:26
 #: apps/basket/reports.py:86 apps/offer/models.py:188 apps/offer/models.py:262
 #: apps/order/abstract_models.py:454
 #: templates/oscar/dashboard/reports/partials/open_basket_report.html:12
@@ -593,11 +608,11 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: apps/basket/abstract_models.py:681
+#: apps/basket/abstract_models.py:679
 msgid "Line attribute"
 msgstr ""
 
-#: apps/basket/abstract_models.py:682
+#: apps/basket/abstract_models.py:680
 msgid "Line attributes"
 msgstr ""
 
@@ -681,7 +696,7 @@ msgstr ""
 
 #: apps/basket/reports.py:62
 msgid "Open baskets"
-msgstr ""
+msgstr "カートオープン"
 
 #: apps/basket/reports.py:88
 #: templates/oscar/dashboard/reports/partials/submitted_basket_report.html:14
@@ -690,16 +705,16 @@ msgstr ""
 
 #: apps/basket/reports.py:117
 msgid "Submitted baskets"
-msgstr ""
+msgstr "注文処理完了済"
 
 #: apps/basket/views.py:92
 msgid "Basket updated"
-msgstr ""
+msgstr "カート内の情報が更新されました"
 
 #: apps/basket/views.py:105
 #, python-format
 msgid "'%(title)s' has been saved for later"
-msgstr ""
+msgstr "'%(title)s' は”後で買う一覧”に追加されました"
 
 #: apps/basket/views.py:111
 msgid "You can't save an item for later if you're not logged in!"
@@ -715,12 +730,16 @@ msgstr ""
 #: apps/basket/views.py:192
 #, python-format
 msgid "'%(title)s' has been added to your basket"
-msgstr "'%(title)s'がカートに追加されました"
+msgstr ""
+"'%(title)s'がカートに追加されました <a href=\"/catalogue/\">続けて注文する</a> - <a "
+"href=\"/basket/\">カートを確認する</a>"
 
 #: apps/basket/views.py:196
 #, python-format
 msgid "'%(title)s' (quantity %(quantity)d) has been added to yourbasket"
 msgstr ""
+"'%(title)s' (quantity %(quantity)d) has been added to your basket <a "
+"href=\"/catalogue/\">Continue</a> - <a href=\"/basket/\">View Basket</a>"
 
 #: apps/basket/views.py:220
 #, python-format
@@ -1506,25 +1525,24 @@ msgstr ""
 
 #: apps/customer/abstract_models.py:192
 msgid "Not yet confirmed"
-msgstr ""
+msgstr "未確認"
 
 #: apps/customer/abstract_models.py:193
 #: templates/oscar/dashboard/index.html:146
 #: templates/oscar/dashboard/index.html:150
 #: templates/oscar/dashboard/offers/offer_list.html:59
-#: templates/oscar/dashboard/users/index.html:48
 msgid "Active"
 msgstr ""
 
 #: apps/customer/abstract_models.py:194
 msgid "Cancelled"
-msgstr ""
+msgstr "キャンセル済"
 
 #: apps/customer/abstract_models.py:195 apps/partner/abstract_models.py:265
 #: templates/oscar/dashboard/index.html:136
 #: templates/oscar/dashboard/catalogue/stockalert_list.html:31
 msgid "Closed"
-msgstr ""
+msgstr "クローズ済"
 
 #: apps/customer/abstract_models.py:201
 #: templates/oscar/dashboard/users/alerts/partials/alert.html:28
@@ -1628,7 +1646,9 @@ msgstr ""
 #: apps/customer/views.py:485
 #, python-format
 msgid "'%s' has been added to your basket"
-msgstr "'%s' カートに追加されました"
+msgstr ""
+"'%s' カートに追加されました <a href=\"/catalogue/\">続けて注文する</a> - <a "
+"href=\"/basket/\">カートを確認する</a>"
 
 #: apps/customer/views.py:508
 msgid "Add a new address"
@@ -1698,7 +1718,7 @@ msgstr ""
 #: templates/oscar/dashboard/catalogue/stockalert_list.html:8
 #: templates/oscar/dashboard/catalogue/stockalert_list.html:17
 msgid "Stock alerts"
-msgstr ""
+msgstr "ストックアラート"
 
 #: apps/dashboard/catalogue/forms.py:30
 msgid "Category with the given path already exists."
@@ -2040,12 +2060,12 @@ msgstr ""
 #: templates/oscar/dashboard/orders/order_detail.html:63
 #: templates/oscar/dashboard/orders/order_list.html:100
 msgid "Date of purchase"
-msgstr ""
+msgstr "注文日時"
 
 #: apps/dashboard/orders/views.py:229
 #: templates/oscar/dashboard/orders/order_list.html:101
 msgid "Number of items"
-msgstr ""
+msgstr "商品数"
 
 #: apps/dashboard/orders/views.py:230
 msgid "Order status"
@@ -2178,7 +2198,7 @@ msgstr ""
 
 #: apps/dashboard/pages/views.py:78
 msgid "Create New Page"
-msgstr ""
+msgstr "新ページ作成"
 
 #: apps/dashboard/pages/views.py:112
 #, python-format
@@ -2416,6 +2436,12 @@ msgstr "オファーと注文状況のレポートは始期終期の設定が有
 msgid "The report is inclusive of this date"
 msgstr "このレポートには始期終期当日を含みます"
 
+#: apps/dashboard/reports/forms.py:21
+#: templates/oscar/dashboard/orders/order_list.html:127
+#: templates/oscar/dashboard/orders/order_list.html:130
+msgid "Download"
+msgstr "ダウンロード"
+
 #: apps/dashboard/reports/forms.py:25
 msgid "Your start date must be before your end date"
 msgstr ""
@@ -2423,7 +2449,7 @@ msgstr ""
 #: apps/dashboard/reports/reports.py:24
 #, python-format
 msgid "%(report_filter)s between %(start_date)s and %(end_date)s"
-msgstr ""
+msgstr "%(report_filter)s 対象期間 %(start_date)s から %(end_date)s　まで"
 
 #: apps/dashboard/reports/views.py:22
 msgid "You do not have access to this report"
@@ -2925,7 +2951,7 @@ msgstr ""
 #: apps/offer/reports.py:37
 #: templates/oscar/dashboard/offers/offer_detail.html:38
 msgid "Offer performance"
-msgstr ""
+msgstr "オファーパフォーマンス"
 
 #: apps/order/abstract_models.py:23 templates/oscar/dashboard/index.html:146
 msgid "Site"
@@ -2937,7 +2963,7 @@ msgstr ""
 
 #: apps/order/abstract_models.py:29
 msgid "Billing Address"
-msgstr ""
+msgstr "請求先"
 
 #: apps/order/abstract_models.py:34
 msgid "Order total (inc. tax)"
@@ -2959,7 +2985,7 @@ msgstr ""
 
 #: apps/order/abstract_models.py:44 templates/oscar/customer/order.html:39
 msgid "Shipping Address"
-msgstr ""
+msgstr "送付先"
 
 #: apps/order/abstract_models.py:45 templates/oscar/checkout/checkout.html:47
 #: templates/oscar/checkout/shipping_methods.html:6
@@ -3003,7 +3029,7 @@ msgstr ""
 #: apps/order/abstract_models.py:225
 #: templates/oscar/dashboard/orders/order_detail.html:432
 msgid "Message"
-msgstr ""
+msgstr "メッセージ"
 
 #: apps/order/abstract_models.py:234
 msgid "Order Note"
@@ -3281,7 +3307,7 @@ msgstr ""
 
 #: apps/order/reports.py:41
 msgid "Orders placed"
-msgstr ""
+msgstr "受注中"
 
 #: apps/order/utils.py:48
 msgid "Empty baskets cannot be submitted"
@@ -3352,7 +3378,7 @@ msgstr "在庫登録"
 
 #: apps/partner/abstract_models.py:96
 msgid "Low Stock Threshold"
-msgstr ""
+msgstr "在庫下限値"
 
 #: apps/partner/abstract_models.py:101
 msgid "Number of Allocated"
@@ -3395,7 +3421,7 @@ msgstr ""
 
 #: apps/partner/abstract_models.py:281
 msgid "Stock Alerts"
-msgstr ""
+msgstr "ストックアラート"
 
 #: apps/partner/utils.py:26
 #, python-format
@@ -3447,7 +3473,7 @@ msgstr "在庫有"
 #: templates/oscar/promotions/singleproduct.html:30
 #: templates/oscar/promotions/partials/product_carousel.html:24
 msgid "Not available"
-msgstr ""
+msgstr "在庫無"
 
 #: apps/payment/forms.py:72
 msgid "Please enter a valid credit card number."
@@ -3515,7 +3541,7 @@ msgstr ""
 #: apps/payment/models.py:31
 #: templates/oscar/dashboard/orders/order_detail.html:372
 msgid "Transactions"
-msgstr ""
+msgstr "トランザクション"
 
 #: apps/payment/models.py:44 apps/payment/models.py:150
 msgid "Source Type"
@@ -3611,6 +3637,7 @@ msgid "Page Promotions"
 msgstr ""
 
 #: apps/promotions/models.py:71
+#: templates/oscar/dashboard/catalogue/stockalert_list.html:27
 msgid "Filter"
 msgstr "絞り込み"
 
@@ -3747,6 +3774,8 @@ msgstr ""
 #: templates/oscar/dashboard/orders/order_list.html:27
 #: templates/oscar/dashboard/orders/order_list.html:46
 #: templates/oscar/dashboard/orders/order_list.html:62
+#: templates/oscar/dashboard/pages/index.html:22
+#: templates/oscar/dashboard/pages/index.html:25
 #: templates/oscar/dashboard/reviews/review_list.html:29
 #: templates/oscar/dashboard/users/index.html:26
 #: templates/oscar/dashboard/users/index.html:29
@@ -3935,7 +3964,7 @@ msgstr ""
 #: apps/voucher/reports.py:42
 #: templates/oscar/dashboard/vouchers/voucher_detail.html:43
 msgid "Voucher performance"
-msgstr ""
+msgstr "バウチャーパフォーマンス"
 
 #: core/validators.py:36
 msgid "Specified page does not exist"
@@ -4007,7 +4036,7 @@ msgstr ""
 
 #: templates/oscar/basket/basket.html:41
 msgid "Items to buy now"
-msgstr "購入予定商品一覧"
+msgstr "注文予定商品一覧"
 
 #: templates/oscar/basket/basket.html:43
 #: templates/oscar/basket/basket.html:203
@@ -4098,7 +4127,7 @@ msgstr ""
 #: templates/oscar/basket/basket.html:157
 #: templates/oscar/checkout/thank_you.html:108
 msgid "Basket total"
-msgstr ""
+msgstr "カート計"
 
 #: templates/oscar/basket/basket.html:163
 #: templates/oscar/checkout/checkout.html:28
@@ -4115,7 +4144,7 @@ msgstr ""
 #: templates/oscar/dashboard/offers/offer_detail.html:52
 #: templates/oscar/dashboard/vouchers/voucher_detail.html:59
 msgid "Order total"
-msgstr ""
+msgstr "注文計"
 
 #: templates/oscar/basket/basket.html:180
 msgid "Proceed to checkout"
@@ -4141,11 +4170,11 @@ msgstr ""
 
 #: templates/oscar/basket/basket.html:202
 msgid "To buy an item now, click 'Move to basket'"
-msgstr ""
+msgstr "ここにある商品を今注文する場合には、”カートに戻す”をクリックしてください"
 
 #: templates/oscar/basket/basket.html:228
 msgid "Move to basket"
-msgstr ""
+msgstr "カートに戻す"
 
 #: templates/oscar/basket/saved_list.html:6
 msgid "Saved Basket"
@@ -4163,12 +4192,12 @@ msgstr ""
 #: templates/oscar/partials/nav_alternate.html:15
 #: templates/oscar/partials/nav_primary.html:16
 msgid "Total:"
-msgstr ""
+msgstr "合計:"
 
 #: templates/oscar/basket/partials/basket_quick.html:18
 #: templates/oscar/partials/brand.html:9
 msgid "View Basket"
-msgstr "カートを見る"
+msgstr "カートを確認する"
 
 #: templates/oscar/basket/partials/basket_quick.html:19
 #: templates/oscar/checkout/checkout.html:6
@@ -4290,13 +4319,13 @@ msgstr "カートに入れる"
 
 #: templates/oscar/catalogue/partials/add_to_basket_form.html:16
 msgid "You can get an email alert when this product is back in stock."
-msgstr ""
+msgstr "この商品が入荷した際にお知らせを受けることができます。"
 
 #: templates/oscar/catalogue/partials/add_to_basket_form.html:18
 #: templates/oscar/promotions/singleproduct.html:31
 #: templates/oscar/promotions/partials/product_carousel.html:25
 msgid "Notify me"
-msgstr ""
+msgstr "入荷通知を受ける"
 
 #: templates/oscar/catalogue/partials/gallery.html:11
 msgid "Previous Image"
@@ -4436,7 +4465,7 @@ msgstr ""
 #: templates/oscar/checkout/shipping_address.html:59
 #: templates/oscar/dashboard/offers/step_form.html:42
 msgid "Continue"
-msgstr ""
+msgstr "もっと商品を探す"
 
 #: templates/oscar/checkout/gateway.html:69
 msgid "Alternatively"
@@ -4952,7 +4981,7 @@ msgstr ""
 
 #: templates/oscar/customer/profile.html:155
 msgid "You haven't been sent any emails yet."
-msgstr ""
+msgstr "Eメールの受信はまだございません"
 
 #: templates/oscar/customer/profile.html:177
 msgid "View email history"
@@ -5066,7 +5095,7 @@ msgstr ""
 #: templates/oscar/customer/emails/commtype_order_placed_body.html:19
 #: templates/oscar/customer/emails/commtype_order_placed_body.txt:14
 msgid "Shipping address:"
-msgstr ""
+msgstr "送付先:"
 
 #: templates/oscar/customer/emails/commtype_order_placed_body.html:24
 #, python-format
@@ -5204,9 +5233,13 @@ msgstr "ダッシュボード"
 msgid "Last 24 hours"
 msgstr ""
 
+#: templates/oscar/dashboard/index.html:32
+msgid "Latest Orders (Hourly)"
+msgstr ""
+
 #: templates/oscar/dashboard/index.html:57
 msgid "Order stats for last 24 hours"
-msgstr ""
+msgstr "24時間以内の注文状況"
 
 #: templates/oscar/dashboard/index.html:59
 #: templates/oscar/dashboard/index.html:105
@@ -5232,11 +5265,11 @@ msgstr ""
 
 #: templates/oscar/dashboard/index.html:81
 msgid "Total customers"
-msgstr ""
+msgstr "全顧客数"
 
 #: templates/oscar/dashboard/index.html:85
 msgid "New customers"
-msgstr ""
+msgstr "新顧客数"
 
 #: templates/oscar/dashboard/index.html:89
 #: templates/oscar/dashboard/index.html:117
@@ -5256,36 +5289,36 @@ msgstr ""
 
 #: templates/oscar/dashboard/index.html:97
 msgid "All time"
-msgstr ""
+msgstr "全注文状況"
 
 #: templates/oscar/dashboard/index.html:121
 msgid "Manage orders"
-msgstr ""
+msgstr "注文管理"
 
 #: templates/oscar/dashboard/index.html:126
 msgid "Catalogue and stock"
-msgstr ""
+msgstr "カタログと在庫状況"
 
 #: templates/oscar/dashboard/index.html:128
 msgid "Total products"
-msgstr ""
+msgstr "全商品"
 
 #: templates/oscar/dashboard/index.html:132
 #: templates/oscar/dashboard/index.html:136
 msgid "stock alerts"
-msgstr ""
+msgstr "ストックアラート"
 
 #: templates/oscar/dashboard/index.html:140
 msgid "Manage catalogue"
-msgstr ""
+msgstr "カタログ管理"
 
 #: templates/oscar/dashboard/index.html:141
 msgid "View stock alerts"
-msgstr ""
+msgstr "ストックアラートを見る"
 
 #: templates/oscar/dashboard/index.html:144
 msgid "Offers, vouchers and promotions"
-msgstr ""
+msgstr "オファー、バウチャーとプロモーション"
 
 #: templates/oscar/dashboard/layout.html:25
 #: templates/oscar/partials/nav_accounts.html:23
@@ -5566,7 +5599,7 @@ msgstr ""
 
 #: templates/oscar/dashboard/orders/order_detail.html:57
 msgid "Order Total"
-msgstr ""
+msgstr "注文商品定価計"
 
 #: templates/oscar/dashboard/orders/order_detail.html:69
 msgid "Time of purchase"
@@ -5579,7 +5612,7 @@ msgstr ""
 #: templates/oscar/dashboard/orders/order_detail.html:93
 #: templates/oscar/dashboard/orders/order_detail.html:382
 msgid "Discounts"
-msgstr ""
+msgstr "ディスカウント"
 
 #: templates/oscar/dashboard/orders/order_detail.html:95
 #: templates/oscar/dashboard/orders/order_detail.html:234
@@ -5686,33 +5719,33 @@ msgstr ""
 
 #: templates/oscar/dashboard/orders/order_detail.html:366
 msgid "No payment sources"
-msgstr ""
+msgstr "支払はありません"
 
 #: templates/oscar/dashboard/orders/order_detail.html:374
 msgid "No transaction data available."
-msgstr ""
+msgstr "トランザクションデータはありません"
 
 #: templates/oscar/dashboard/orders/order_detail.html:405
 msgid "No discounts were applied in this order."
-msgstr ""
+msgstr "この注文はディスカウント対象ではありません。"
 
 #: templates/oscar/dashboard/orders/order_detail.html:416
 msgid "No email data available."
-msgstr ""
+msgstr "この注文に関するEmailはありません。"
 
 #: templates/oscar/dashboard/orders/order_detail.html:465
 msgid "Notes are only editable for 5 minutes after being saved."
-msgstr ""
+msgstr "メッセージはセーブ後5分間のみ編集可能です。"
 
 #: templates/oscar/dashboard/orders/order_list.html:8
 #: templates/oscar/dashboard/orders/order_list.html:17
 msgid "Order management"
-msgstr ""
+msgstr "注文管理"
 
 #: templates/oscar/dashboard/orders/order_list.html:47
 #: templates/oscar/dashboard/orders/order_list.html:53
 msgid "Advanced Search"
-msgstr ""
+msgstr "詳細検索"
 
 #: templates/oscar/dashboard/orders/order_list.html:61
 msgid "Close"
@@ -5724,16 +5757,11 @@ msgstr "全注文"
 
 #: templates/oscar/dashboard/orders/order_list.html:96
 msgid "Select all"
-msgstr ""
+msgstr "全て選択"
 
 #: templates/oscar/dashboard/orders/order_list.html:103
 msgid "Customer"
-msgstr ""
-
-#: templates/oscar/dashboard/orders/order_list.html:127
-#: templates/oscar/dashboard/orders/order_list.html:130
-msgid "Download"
-msgstr "ダウンロード"
+msgstr "顧客"
 
 #: templates/oscar/dashboard/orders/order_list.html:128
 msgid "Download selected orders as a CSV"
@@ -5759,6 +5787,10 @@ msgstr ""
 #: templates/oscar/dashboard/orders/statistics.html:8
 msgid "Order statistics"
 msgstr ""
+
+#: templates/oscar/dashboard/orders/statistics.html:36
+msgid "Filter result"
+msgstr "絞込結果"
 
 #: templates/oscar/dashboard/orders/statistics.html:41
 msgid "Summary"
@@ -5801,9 +5833,13 @@ msgstr ""
 msgid "Delete page <strong>%(title)s</strong> - are you sure?"
 msgstr ""
 
+#: templates/oscar/dashboard/pages/index.html:33
+msgid "Create new page"
+msgstr "新ページ作成"
+
 #: templates/oscar/dashboard/pages/index.html:72
 msgid "No pages found."
-msgstr ""
+msgstr "ページはまだありません"
 
 #: templates/oscar/dashboard/pages/update.html:33
 msgid "Page"
@@ -5904,21 +5940,25 @@ msgstr "コンテンツブロック管理"
 msgid "Pages with content blocks"
 msgstr ""
 
+#: templates/oscar/dashboard/promotions/pagepromotion_list.html:30
+msgid "View by page"
+msgstr "ページ毎に見る"
+
 #: templates/oscar/dashboard/promotions/pagepromotion_list.html:31
 msgid "View all content blocks"
-msgstr ""
+msgstr "全てのCBを見る"
 
 #: templates/oscar/dashboard/promotions/pagepromotion_list.html:32
 msgid "View content blocks by page"
-msgstr ""
+msgstr "ページ毎にCBを見る"
 
 #: templates/oscar/dashboard/promotions/pagepromotion_list.html:36
 msgid "Pages with content blocks on them"
-msgstr ""
+msgstr "コンテンツブロックを含むページ"
 
 #: templates/oscar/dashboard/promotions/pagepromotion_list.html:45
 msgid "Number of content blocks"
-msgstr ""
+msgstr "コンテンツブロック数"
 
 #: templates/oscar/dashboard/promotions/pagepromotion_list.html:65
 #: templates/oscar/dashboard/promotions/promotion_list.html:64
@@ -6044,10 +6084,14 @@ msgstr "リポート概要"
 msgid "Reporting dashboard"
 msgstr "リポート概要"
 
+#: templates/oscar/dashboard/reports/index.html:31
+msgid "Generate report"
+msgstr "レポート作成"
+
 #: templates/oscar/dashboard/reports/partials/offer_report.html:23
 #: templates/oscar/dashboard/reports/partials/order_report.html:31
 msgid "No results found."
-msgstr ""
+msgstr "結果はありませんでした"
 
 #: templates/oscar/dashboard/reports/partials/voucher_report.html:27
 msgid "No vouchers were used in this period"
@@ -6169,7 +6213,7 @@ msgstr ""
 
 #: templates/oscar/dashboard/users/detail.html:75
 msgid "Date of last order:"
-msgstr ""
+msgstr "最終注文日:"
 
 #: templates/oscar/dashboard/users/detail.html:84
 msgid "Number of reviews:"
@@ -6185,18 +6229,19 @@ msgstr ""
 
 #: templates/oscar/dashboard/users/detail.html:125
 msgid "This customer has not placed any orders yet."
-msgstr ""
+msgstr "このユーザーはまだ注文が発生していません"
 
 #: templates/oscar/dashboard/users/detail.html:148
 msgid "This customer has not saved any addresses."
-msgstr ""
+msgstr "詳細住所の登録はありません"
 
 #: templates/oscar/dashboard/users/detail.html:177
 msgid "This customer has not written any reviews yet."
 msgstr ""
 
+#: templates/oscar/dashboard/users/index.html:48
 #: templates/oscar/dashboard/users/index.html:49
-msgid "Staff status"
+msgid "True,False"
 msgstr ""
 
 #: templates/oscar/dashboard/users/index.html:51
@@ -6236,7 +6281,7 @@ msgstr ""
 #: templates/oscar/dashboard/users/alerts/list.html:25
 #: templates/oscar/dashboard/users/alerts/update.html:17
 msgid "Product alerts"
-msgstr ""
+msgstr "商品アラート"
 
 #: templates/oscar/dashboard/users/alerts/delete.html:26
 #, python-format
@@ -6280,7 +6325,7 @@ msgstr ""
 
 #: templates/oscar/dashboard/users/alerts/update.html:33
 msgid "Change status"
-msgstr ""
+msgstr "ステータス更新"
 
 #: templates/oscar/dashboard/vouchers/voucher_delete.html:6
 #: templates/oscar/dashboard/vouchers/voucher_delete.html:19
@@ -6402,6 +6447,8 @@ msgid ""
 "\t\t\t\tPage %(page_num)s of %(total_pages)s\n"
 "\t\t\t"
 msgstr ""
+"\n"
+"ページ%(page_num)s / %(total_pages)s"
 
 #: templates/oscar/promotions/handpickedproductlist.html:20
 msgid "See more"
